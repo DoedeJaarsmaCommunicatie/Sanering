@@ -1,0 +1,20 @@
+<header class="header">
+    <section class="container mx-auto flex py-4 px-4 lg:px-0">
+        <figure class="custom-logo--fig">
+            {% set _logo = Image(theme.theme_mod('custom_logo')) %}
+            <a href="{{ site.link }}" class="">
+                <img src="{{ _logo.src }}" alt="{{ _logo.src?? site.title }}" class="custom-logo">
+            </a>
+        </figure>
+
+        <button class="ml-auto lg:hidden js-menu-button">
+            <svg class="hamburger">
+                <line x1="0" x2="30" y1="29" y2="29" class="hamburger--line"></line>
+                <line x1="0" x2="30" y1="15" y2="15" class="hamburger--line"></line>
+                <line x1="0" x2="30" y1="1" y2="1" class="hamburger--line"></line>
+            </svg>
+        </button>
+    </section>
+</header>
+
+{{ include('components/navbar.html.twig') }}

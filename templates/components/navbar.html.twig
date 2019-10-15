@@ -1,0 +1,21 @@
+<div class="navbar--wrapper">
+    <nav class="navbar container mx-auto">
+        {% for item in primaryMenu.items %}
+            <div class="navbar--item--wrapper {{ item.children|length > 0 ? 'has-children': 'no-children' }}">
+                <a href="{{ item.link }}" target="{{ item.target }}" class="navbar--item nav-item {{ item.classes|join(' ') }}" title="{{ item.title }}">
+                    {{ item.title }}
+                </a>
+
+                {% if item.children %}
+                    <div class="navbar--submenu--wrapper">
+                        {% for child in item.children %}
+                            <a href="{{ child.link }}" class="navbar--submenu--item {{ child.classes|join(' ') }}">
+                                {{ child.title }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </nav>
+</div>

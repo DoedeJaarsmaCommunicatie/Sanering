@@ -1,0 +1,12 @@
+//noinspection CssInvalidAtRule
+@use "variables" as l;
+
+.custom-logo {
+  height: l.$custom-logo--height;
+}
+
+@media screen and (max-width: 1024px) {
+  .custom-logo {
+    height: l.$custom-logo-mobile--height;
+  }
+}

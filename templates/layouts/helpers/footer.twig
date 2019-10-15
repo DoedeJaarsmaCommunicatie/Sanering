@@ -1,0 +1,14 @@
+{% do fn('elementor_theme_do_location', 'footer') %}
+
+<footer class="footer">
+    <nav class="footer-menu container mx-auto">
+        {% for item in footerMenu.items %}
+            <a href="{{ item.link }}" class="footer-menu--item {{ item.classes|join(' ') }}" target="{{ item.target }}" title="{{ item.title }}">
+                {{ item.title }}
+            </a>
+        {% endfor %}
+    </nav>
+</footer>
+
+<link rel="stylesheet" href="{{ theme.link }}/dist/styles/main.css" >
+<script src="{{ theme.link }}/dist/scripts/main.js" async></script>

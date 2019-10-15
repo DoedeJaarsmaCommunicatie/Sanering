@@ -1,0 +1,8 @@
+@use 'abstracts' as abs;
+
+$hamburger-stroke--color: abs.$black !default;
+$hamburger-stroke--width: 2px !default;
+
+$hamburger--size: 30px !default;
+$hamburger--width: $hamburger--size !default;
+$hamburger--height: $hamburger--size !default;

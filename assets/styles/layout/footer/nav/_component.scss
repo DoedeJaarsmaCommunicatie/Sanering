@@ -1,0 +1,44 @@
+@use 'abstracts' as *;
+@use "variables" as *;
+
+footer.footer {
+  background: $background;
+  border-top: $border-top;
+}
+
+.footer-menu {
+  @include above-bp(1024) {
+    display: flex;
+    justify-content: center;
+
+  }
+  padding: 1rem 0;
+}
+
+.footer-menu--item {
+  color: $item-color;
+  padding: 0 2rem;
+
+  @include below-bp(1023) {
+    display: block;
+    margin: .875rem 0;
+    padding: 0 1rem;
+  }
+
+  @include above-bp(1024) {
+    &:not(:last-of-type) {
+      position: relative;
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      content: ' ';
+      background: $item-color;
+    }
+  }
+}
+

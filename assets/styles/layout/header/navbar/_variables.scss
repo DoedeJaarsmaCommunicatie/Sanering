@@ -1,0 +1,15 @@
+@use "abstracts" as a;
+
+$background: a.$black !default;
+$color: a.$white !default;
+
+$background--desktop: $background !default;
+$background--submenu--desktop: $background !default;
+$color--desktop: $color !default;
+$color--submenu--desktop: $color !default;
+
+$bar--height--desktop: 10px !default;
+$bar--color--desktop: a.$primary !default;
+
+$background--mobile: $background !default;
+$color--mobile: $color !default;

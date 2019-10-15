@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+.hamburger {
+  width: $hamburger--width;
+  height: $hamburger--height;
+  pointer-events: none;
+}
+
+.hamburger--line {
+  stroke: $hamburger-stroke--color;
+  stroke-width: $hamburger-stroke--width;
+}

@@ -18,16 +18,17 @@ const documentLoaded = () => {
 
 const handleMenu = () => {
     const button = document.querySelector('.js-menu-button');
+    const wrapper = document.querySelector('.navbar--wrapper');
 
     button.addEventListener('click', function () {
-        document.querySelector('.navbar--wrapper').classList.add('active');
+        wrapper.classList.add('active');
     })
 
     document.addEventListener('click', function (ev) {
-        if (ev.target === button) {
+        if (ev.target === button || wrapper.contains(ev.target)) {
             return;
         }
 
-        document.querySelector('.navbar--wrapper').classList.remove('active');
+        wrapper.classList.remove('active');
     })
 }

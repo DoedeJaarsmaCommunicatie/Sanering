@@ -13,7 +13,7 @@ const purger = mix.inProduction()
 
             defaultExtractor: content => content.match(/[\w-\/:]+(?<!:)/g) || [],
 
-            whitelist: ['admin-bar', 'body', 'active']
+            whitelist: ['admin-bar', 'body', 'active', 'current-menu-item']
         })
     ] : []
 

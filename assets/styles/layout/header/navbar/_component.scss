@@ -12,6 +12,7 @@
     transform: scale(0, 1);
     transform-origin: right;
     transition: all 225ms linear;
+    z-index: 50;
 
     &.active {
       transform: scale(1);

@@ -17,5 +17,23 @@
                 {% endif %}
             </div>
         {% endfor %}
+        <div class="navbar--item--wrapper">
+            <form class="js-search-form navbar--item nav-item" onsubmit="searchFormHandler()" role="search">
+                <input type="text" class="px-4" id="s" name="s"  style="display: none; color: #3d3d3e;" placeholder="{{ __('Search') }}"/>
+                <button class="" type="submit" style="pointer-events: auto;">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <script>
+                document.querySelector('.js-search-form').addEventListener('submit', function (e) {
+                    if (!e.target.classList.contains('active')) {
+                        e.preventDefault();
+                        e.target.classList.add('active');
+                        document.querySelector('#s').style.display = '';
+                    }
+                });
+            </script>
+        </div>
     </nav>
 </div>

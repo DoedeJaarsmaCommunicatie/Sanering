@@ -1,7 +1,8 @@
 <?php
-use Timber\Timber;
 
 include_once get_stylesheet_directory() . '/vendor/autoload.php';
+
+use Timber\Timber;
 
 add_theme_support('custom-logo');
 

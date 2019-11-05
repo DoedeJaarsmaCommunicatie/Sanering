@@ -16,3 +16,8 @@ __FILE__,
 Timber::$locations = [
     get_stylesheet_directory() . '/templates/',
 ];
+
+function remediation_register_elementor_locations( $elementor_theme_manager ) {
+     $elementor_theme_manager->register_location( 'archive' );
+}
+add_action( 'elementor/theme/register_locations', 'remediation_register_elementor_locations' );
